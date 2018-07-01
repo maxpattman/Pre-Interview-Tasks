@@ -32,4 +32,19 @@ public class CheckoutTest {
         System.out.println(x);
         assertEquals(0.25,x);
     }
+
+     @Test
+    public void buyOneGetOneFree(){
+        String[] items = {"apple","apple"};
+        double result = Checkout.checkout(items);
+        assertTrue(result == 0.6) ;
+    }
+      @Test
+     public void threeForTwo(){
+        String[]items = {"orange","orange","orange"};
+        double result = Checkout.checkout(items);
+        assertTrue(result == 0.5);
+
 }
+}
+
